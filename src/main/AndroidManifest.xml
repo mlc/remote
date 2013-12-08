@@ -10,11 +10,8 @@
             android:xlargeScreens="true"
             android:anyDensity="true"/>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <uses-feature android:name='android.hardware.location' android:required="false"/>
-    <uses-feature android:name='android.hardware.location.gps' android:required="false"/>
-    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
+    <uses-feature android:name="android.hardware.consumerir" android:required="true"/>
 
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
         android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
