@@ -45,9 +45,10 @@ android {
            zipAlign true
         }
         release {
-            runProguard false
+            runProguard true
             zipAlign true
-            proguardFile 'proguard.cfg'
+            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFile 'proguard.txt'
         }
     }
 }
