@@ -22,6 +22,8 @@ dependencies {
     compile 'com.android.support:support-v4:19.0.+'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.jakewharton:butterknife:4.0.1'
+    // compile 'com.netflix.rxjava:rxjava-android:0.15.1'
+    compile 'com.google.guava:guava:15.0'
 }
 
 android {
