@@ -1,6 +1,13 @@
 package net.mlcastle.remote;
 
 import android.hardware.ConsumerIrManager;
+import android.os.SystemClock;
+import android.util.Log;
+import com.google.common.collect.Lists;
+import com.google.common.primitives.Ints;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class IrTransmitter {
     final ConsumerIrManager irManager;
@@ -40,5 +47,14 @@ public class IrTransmitter {
             }
         }
         return best;
+    }
+
+    public void transmit(IrCode code) {
+        long now = SystemClock.elapsedRealtimeNanos();
+        for (List<Integer> subpat : Lists.partition(Ints.asList(code.toPattern()), 16)) {
+            irManager.transmit(code.frequency, Ints.toArray(subpat));
+        }
+        long dnow = SystemClock.elapsedRealtimeNanos() - now;
+        Log.d("IrTransmitter", String.format("took %d µs, expected %d µs", TimeUnit.NANOSECONDS.toMicros(dnow), code.duration()));
     }
 }

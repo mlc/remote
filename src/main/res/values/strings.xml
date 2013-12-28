@@ -3,4 +3,6 @@
     <string name="app_name">Remote</string>
     <string name="btn_start">Go</string>
     <string name="icon_copyright">Remote Control designed by <a href="http://thenounproject.com/paultynes">Paul Tynes</a> from the <a href="http://www.thenounproject.com/">Noun Project</a></string>
+    <string name="north_america">North America</string>
+    <string name="europe">Europe</string>
 </resources>
