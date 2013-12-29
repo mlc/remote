@@ -6,14 +6,20 @@ import android.util.Log;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class IrTransmitter {
-    final ConsumerIrManager irManager;
+    public static final String TAG = "IrTransmitter";
+    public static final long INTER_CODE_DELAY = 200L; // ms
+
+    private final ConsumerIrManager irManager;
+    private final ConsumerIrManager.CarrierFrequencyRange[] ranges;
 
     public IrTransmitter(ConsumerIrManager irManager) {
         this.irManager = irManager;
+        ranges = irManager.getCarrierFrequencies();
     }
 
     private static int better(int target, int currentBest, int candidate) {
@@ -27,11 +33,10 @@ public class IrTransmitter {
      * Given a target carrier frequency, returns the closest frequency that our
      * IR manager can transmit on.
      * @param target the target carrier frequency
-     * @param ranges a set of carrier frequency ranges
      * @return <code>target</code> if it's in one of the <code>ranges</code>, the best available frequency otherwise
      * @throws net.mlcastle.remote.NoIrException <code>ranges.length == 0</code>
      */
-    private static int bestFrequency(int target, ConsumerIrManager.CarrierFrequencyRange[] ranges) {
+    private int bestFrequency(int target) {
         if (ranges.length == 0)
             throw new NoIrException();
 
@@ -50,11 +55,15 @@ public class IrTransmitter {
     }
 
     public void transmit(IrCode code) {
-        long now = SystemClock.elapsedRealtimeNanos();
-        for (List<Integer> subpat : Lists.partition(Ints.asList(code.toPattern()), 16)) {
-            irManager.transmit(code.frequency, Ints.toArray(subpat));
-        }
-        long dnow = SystemClock.elapsedRealtimeNanos() - now;
-        Log.d("IrTransmitter", String.format("took %d µs, expected %d µs", TimeUnit.NANOSECONDS.toMicros(dnow), code.duration()));
+        int[] pattern = code.toPattern();
+        int freq = bestFrequency(code.frequency);
+        long start = SystemClock.elapsedRealtimeNanos(); // ns
+        irManager.transmit(freq, pattern);
+        long elapsed = SystemClock.elapsedRealtimeNanos() - start; // ns
+        long remaining = code.duration() - TimeUnit.NANOSECONDS.toMicros(elapsed);  // µs
+        long toSleep = TimeUnit.MICROSECONDS.toMillis(Math.max(0, remaining)) + INTER_CODE_DELAY; // ms
+        Log.d(TAG, String.format("transmitting %s took %d ns, expected %d µs, will sleep %d ms", code.name, elapsed, code.duration(), toSleep));
+
+        SystemClock.sleep(toSleep);
     }
 }

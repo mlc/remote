@@ -14,6 +14,7 @@ public final class IrCode implements Parcelable {
     public final int frequency;
     public final Timing[] timings;
     public final byte[] timingIndexes;
+    private transient int duration = 0;
 
     public IrCode(Parcel in) {
         name = in.readString();
@@ -61,20 +62,24 @@ public final class IrCode implements Parcelable {
 
         for (int i = 0; i < length; ++i) {
             int index = timingIndexes[i];
-            result[i*2] = timings[index].on * 100;
-            result[i*2+1] = timings[index].off * 100;
+            result[i*2] = timings[index].on * 10;
+            result[i*2+1] = timings[index].off * 10;
         }
+
+        // is it really true that neither JDK nor guava has a sum function?
+        int sum = 0;
+        for (int p : result)
+            sum += p;
+        duration = sum;
+
         return result;
     }
 
     public int duration() {
-        int[] pattern = toPattern();
+        if (duration != 0)
+            toPattern(); // for side effect
 
-        // is it really true that neither JDK nor guava has a sum function?
-        int sum = 0;
-        for (int p : pattern)
-            sum += p;
-        return sum;
+        return duration;
     }
 
     @Override
