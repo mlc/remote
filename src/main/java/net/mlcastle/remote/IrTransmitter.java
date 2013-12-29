@@ -3,11 +3,7 @@ package net.mlcastle.remote;
 import android.hardware.ConsumerIrManager;
 import android.os.SystemClock;
 import android.util.Log;
-import com.google.common.collect.Lists;
-import com.google.common.primitives.Ints;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class IrTransmitter {
