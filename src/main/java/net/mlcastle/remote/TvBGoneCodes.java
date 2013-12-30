@@ -630,18 +630,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 2, 0, 2, 0, 2, 0, 0, 0, 1, 1, 1, 1, 3, 0, 2, 0, 2, 0, 2, 0, 0, 0, 1, 1, 1, 1}
         ));
 
-        final Timing[] code_na55Times = {
-                new Timing((short)3, (short)10),
-                new Timing((short)3, (short)20),
-                new Timing((short)35, (short)10),
-                new Timing((short)35, (short)12778)
-        };
-        builder.add(new IrCode("na55",
-                3068, // carrier frequency
-                code_na55Times,
-                new byte[] {2, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 3, 2, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0}
-        ));
-
         final Timing[] code_na56Times = {
                 new Timing((short)55, (short)193),
                 new Timing((short)57, (short)192),
@@ -843,12 +831,6 @@ public class TvBGoneCodes {
                 40000, // carrier frequency
                 code_na017Times,
                 new byte[] {5, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 2, 4, 3, 4}
-        ));
-
-        builder.add(new IrCode("na80",
-                3068, // carrier frequency
-                code_na55Times,
-                new byte[] {2, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 3, 2, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0}
         ));
 
         final Timing[] code_na81Times = {
@@ -1552,30 +1534,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 3, 2, 1, 1, 1, 1, 6, 1, 1, 5, 3, 2, 1, 1, 1, 1, 6, 1, 1}
         ));
 
-        final Timing[] code_eu069Times = {
-                new Timing((short)4, (short)750),
-                new Timing((short)4, (short)4999),
-                new Timing((short)1011, (short)750),
-                new Timing((short)1514, (short)750)
-        };
-        builder.add(new IrCode("eu069",
-                199, // carrier frequency
-                code_eu069Times,
-                new byte[] {2, 0, 0, 0, 0, 3, 1, 2, 0, 0, 0, 0, 3}
-        ));
-
-        final Timing[] code_eu070Times = {
-                new Timing((short)4, (short)750),
-                new Timing((short)4, (short)4999),
-                new Timing((short)507, (short)750),
-                new Timing((short)1514, (short)750)
-        };
-        builder.add(new IrCode("eu070",
-                199, // carrier frequency
-                code_eu070Times,
-                new byte[] {2, 0, 2, 0, 0, 3, 1, 2, 0, 2, 0, 0, 3}
-        ));
-
         final Timing[] code_eu071Times = {
                 new Timing((short)14, (short)491),
                 new Timing((short)14, (short)743),
@@ -1585,17 +1543,6 @@ public class TvBGoneCodes {
                 38462, // carrier frequency
                 code_eu071Times,
                 new byte[] {1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 2, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1}
-        ));
-
-        final Timing[] code_eu072Times = {
-                new Timing((short)863, (short)4999),
-                new Timing((short)2581, (short)568),
-                new Timing((short)4299, (short)568)
-        };
-        builder.add(new IrCode("eu072",
-                116, // carrier frequency
-                code_eu072Times,
-                new byte[] {2, 1, 0, 2, 1}
         ));
 
         final Timing[] code_eu073Times = {
@@ -1623,18 +1570,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 4, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 4}
         ));
 
-        final Timing[] code_eu075Times = {
-                new Timing((short)6, (short)851),
-                new Timing((short)6, (short)5474),
-                new Timing((short)578, (short)851),
-                new Timing((short)1151, (short)851)
-        };
-        builder.add(new IrCode("eu075",
-                175, // carrier frequency
-                code_eu075Times,
-                new byte[] {3, 0, 0, 2, 0, 0, 2, 1, 3, 0, 0, 2, 0, 0, 2}
-        ));
-
         final Timing[] code_eu076Times = {
                 new Timing((short)14, (short)843),
                 new Timing((short)16, (short)555),
@@ -1660,18 +1595,6 @@ public class TvBGoneCodes {
                 30303, // carrier frequency
                 code_eu077Times,
                 new byte[] {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 3, 1, 1, 2, 1, 6, 2, 1, 1, 5, 3, 1, 1, 2, 1, 6, 2, 1, 1}
-        ));
-
-        final Timing[] code_eu078Times = {
-                new Timing((short)6, (short)925),
-                new Timing((short)6, (short)1339),
-                new Timing((short)6, (short)2787),
-                new Timing((short)2110, (short)1339)
-        };
-        builder.add(new IrCode("eu078",
-                48, // carrier frequency
-                code_eu078Times,
-                new byte[] {3, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0}
         ));
 
         final Timing[] code_eu079Times = {
@@ -1811,19 +1734,6 @@ public class TvBGoneCodes {
                 new byte[] {4, 1, 0, 1, 0, 1, 0, 0, 0, 2, 1, 0, 1, 0, 1, 0, 0, 0, 3, 4, 1, 0, 1, 0, 1, 0, 0, 0, 2, 1, 0, 1, 0, 1, 0, 0, 0}
         ));
 
-        final Timing[] code_eu090Times = {
-                new Timing((short)3, (short)9),
-                new Timing((short)3, (short)19),
-                new Timing((short)3, (short)29),
-                new Timing((short)44, (short)9),
-                new Timing((short)44, (short)9968)
-        };
-        builder.add(new IrCode("eu090",
-                2428, // carrier frequency
-                code_eu090Times,
-                new byte[] {3, 0, 0, 0, 2, 1, 0, 0, 0, 0, 0, 1, 4, 3, 0, 0, 0, 2, 1, 0, 0, 0, 0, 0, 1}
-        ));
-
         final Timing[] code_eu091Times = {
                 new Timing((short)15, (short)138),
                 new Timing((short)15, (short)446),
@@ -1859,19 +1769,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 1, 1, 1, 2, 1, 2, 2, 2, 1}
         ));
 
-        final Timing[] code_eu094Times = {
-                new Timing((short)3, (short)8),
-                new Timing((short)3, (short)18),
-                new Timing((short)3, (short)24),
-                new Timing((short)43, (short)8),
-                new Timing((short)43, (short)9969)
-        };
-        builder.add(new IrCode("eu094",
-                2464, // carrier frequency
-                code_eu094Times,
-                new byte[] {3, 1, 0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 4, 3, 1, 0, 0, 2, 1, 0, 0, 0, 0, 0, 0}
-        ));
-
         builder.add(new IrCode("eu095",
                 34483, // carrier frequency
                 code_eu073Times,
@@ -1899,18 +1796,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 1, 2, 1, 2, 2, 2, 3, 1, 1, 2, 1, 2, 2, 2}
         ));
 
-        final Timing[] code_eu098Times = {
-                new Timing((short)3, (short)8),
-                new Timing((short)3, (short)18),
-                new Timing((short)34, (short)8),
-                new Timing((short)34, (short)12731)
-        };
-        builder.add(new IrCode("eu098",
-                3227, // carrier frequency
-                code_eu098Times,
-                new byte[] {2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3, 2, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0}
-        ));
-
         final Timing[] code_eu099Times = {
                 new Timing((short)46, (short)53),
                 new Timing((short)46, (short)106),
@@ -1924,12 +1809,6 @@ public class TvBGoneCodes {
                 35714, // carrier frequency
                 code_eu099Times,
                 new byte[] {2, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 1, 0, 5, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0, 4, 2, 1, 0, 5, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0}
-        ));
-
-        builder.add(new IrCode("eu100",
-                3226, // carrier frequency
-                code_eu098Times,
-                new byte[] {2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 2, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0}
         ));
 
         final Timing[] code_eu101Times = {
@@ -2097,18 +1976,6 @@ public class TvBGoneCodes {
                 new byte[] {4, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 2, 3, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 2, 3, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0}
         ));
 
-        final Timing[] code_eu116Times = {
-                new Timing((short)3, (short)9),
-                new Timing((short)3, (short)31),
-                new Timing((short)47, (short)9),
-                new Timing((short)47, (short)10957)
-        };
-        builder.add(new IrCode("eu116",
-                2263, // carrier frequency
-                code_eu116Times,
-                new byte[] {2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}
-        ));
-
         final Timing[] code_eu117Times = {
                 new Timing((short)49, (short)53),
                 new Timing((short)49, (short)262),
@@ -2272,18 +2139,6 @@ public class TvBGoneCodes {
                 new byte[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0}
         ));
 
-        final Timing[] code_eu132Times = {
-                new Timing((short)4, (short)750),
-                new Timing((short)4, (short)4999),
-                new Timing((short)1011, (short)750),
-                new Timing((short)2018, (short)750)
-        };
-        builder.add(new IrCode("eu132",
-                199, // carrier frequency
-                code_eu132Times,
-                new byte[] {2, 0, 0, 0, 3, 1, 2, 0, 0, 0, 3}
-        ));
-
         builder.add(new IrCode("eu133",
                 38462, // carrier frequency
                 code_eu071Times,
@@ -2300,17 +2155,6 @@ public class TvBGoneCodes {
                 40000, // carrier frequency
                 code_eu134Times,
                 new byte[] {1, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 3, 2, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0}
-        ));
-
-        final Timing[] code_eu135Times = {
-                new Timing((short)864, (short)566),
-                new Timing((short)864, (short)5188),
-                new Timing((short)2580, (short)566)
-        };
-        builder.add(new IrCode("eu135",
-                117, // carrier frequency
-                code_eu135Times,
-                new byte[] {2, 0, 2, 1, 2, 0, 2}
         ));
 
         builder.add(new IrCode("eu136",
@@ -2332,28 +2176,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 4, 1, 1, 2, 4, 1, 2, 1, 4, 3, 1, 4, 1, 1, 2, 4, 1, 2, 1, 4}
         ));
 
-        final Timing[] code_eu138Times = {
-                new Timing((short)4, (short)1507),
-                new Timing((short)4, (short)3005),
-                new Timing((short)2083, (short)1507)
-        };
-        builder.add(new IrCode("eu138",
-                96, // carrier frequency
-                code_eu138Times,
-                new byte[] {2, 0, 0, 1, 2, 0, 0}
-        ));
-
-        final Timing[] code_eu139Times = {
-                new Timing((short)14, (short)141),
-                new Timing((short)14, (short)452),
-                new Timing((short)635, (short)141),
-                new Timing((short)635, (short)6310)
-        };
-        builder.add(new IrCode("eu139",
-                161, // carrier frequency
-                code_eu139Times,
-                new byte[] {2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}
-        ));
         euCodes = builder.build();
     }
 }
