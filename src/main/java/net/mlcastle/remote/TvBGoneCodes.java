@@ -630,93 +630,6 @@ public class TvBGoneCodes {
                 new byte[] {0, 2, 0, 2, 0, 2, 0, 0, 0, 1, 1, 1, 1, 3, 0, 2, 0, 2, 0, 2, 0, 0, 0, 1, 1, 1, 1}
         ));
 
-        final Timing[] code_na100Times = {
-                new Timing((short)43, (short)171),
-                new Timing((short)45, (short)60),
-                new Timing((short)45, (short)170),
-                new Timing((short)54, (short)2301)
-        };
-        builder.add(new IrCode("na100",
-                35842, // carrier frequency
-                code_na100Times,
-                new byte[] {0, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 3, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1}
-        ));
-
-        builder.add(new IrCode("na101",
-                38462, // carrier frequency
-                code_na004Times,
-                new byte[] {4, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 3, 5}
-        ));
-
-        final Timing[] code_na102Times = {
-                new Timing((short)86, (short)87),
-                new Timing((short)86, (short)258),
-                new Timing((short)86, (short)3338),
-                new Timing((short)346, (short)348),
-                new Timing((short)348, (short)347)
-        };
-        builder.add(new IrCode("na102",
-                40000, // carrier frequency
-                code_na102Times,
-                new byte[] {3, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 2, 4, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0}
-        ));
-
-        builder.add(new IrCode("na103",
-                38462, // carrier frequency
-                code_na045Times,
-                new byte[] {4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
-        ));
-
-        builder.add(new IrCode("na104",
-                40000, // carrier frequency
-                code_na017Times,
-                new byte[] {5, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 2, 4, 3, 4}
-        ));
-
-        builder.add(new IrCode("na105",
-                40000, // carrier frequency
-                code_na017Times,
-                new byte[] {5, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 3, 4}
-        ));
-
-        builder.add(new IrCode("na106",
-                40000, // carrier frequency
-                code_na044Times,
-                new byte[] {4, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 3, 5}
-        ));
-
-        builder.add(new IrCode("na107",
-                38462, // carrier frequency
-                code_na045Times,
-                new byte[] {4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
-        ));
-
-        builder.add(new IrCode("na108",
-                38462, // carrier frequency
-                code_na045Times,
-                new byte[] {4, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
-        ));
-
-        final Timing[] code_na109Times = {
-                new Timing((short)58, (short)61),
-                new Timing((short)58, (short)211),
-                new Timing((short)58, (short)9582),
-                new Timing((short)73, (short)4164),
-                new Timing((short)883, (short)211),
-                new Timing((short)1050, (short)494)
-        };
-        builder.add(new IrCode("na109",
-                40000, // carrier frequency
-                code_na109Times,
-                new byte[] {5, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 3, 4, 2, 4}
-        ));
-
-        builder.add(new IrCode("na110",
-                40161, // carrier frequency
-                code_na017Times,
-                new byte[] {5, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 2, 4, 3, 4}
-        ));
-
         final Timing[] code_na55Times = {
                 new Timing((short)3, (short)10),
                 new Timing((short)3, (short)20),
@@ -1127,6 +1040,93 @@ public class TvBGoneCodes {
                 38462, // carrier frequency
                 code_na009Times,
                 new byte[] {4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 5, 3, 5}
+        ));
+
+        final Timing[] code_na100Times = {
+                new Timing((short)43, (short)171),
+                new Timing((short)45, (short)60),
+                new Timing((short)45, (short)170),
+                new Timing((short)54, (short)2301)
+        };
+        builder.add(new IrCode("na100",
+                35842, // carrier frequency
+                code_na100Times,
+                new byte[] {0, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 3, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1}
+        ));
+
+        builder.add(new IrCode("na101",
+                38462, // carrier frequency
+                code_na004Times,
+                new byte[] {4, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 3, 5}
+        ));
+
+        final Timing[] code_na102Times = {
+                new Timing((short)86, (short)87),
+                new Timing((short)86, (short)258),
+                new Timing((short)86, (short)3338),
+                new Timing((short)346, (short)348),
+                new Timing((short)348, (short)347)
+        };
+        builder.add(new IrCode("na102",
+                40000, // carrier frequency
+                code_na102Times,
+                new byte[] {3, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 2, 4, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0}
+        ));
+
+        builder.add(new IrCode("na103",
+                38462, // carrier frequency
+                code_na045Times,
+                new byte[] {4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
+        ));
+
+        builder.add(new IrCode("na104",
+                40000, // carrier frequency
+                code_na017Times,
+                new byte[] {5, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 2, 4, 3, 4}
+        ));
+
+        builder.add(new IrCode("na105",
+                40000, // carrier frequency
+                code_na017Times,
+                new byte[] {5, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 3, 4}
+        ));
+
+        builder.add(new IrCode("na106",
+                40000, // carrier frequency
+                code_na044Times,
+                new byte[] {4, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 3, 5}
+        ));
+
+        builder.add(new IrCode("na107",
+                38462, // carrier frequency
+                code_na045Times,
+                new byte[] {4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
+        ));
+
+        builder.add(new IrCode("na108",
+                38462, // carrier frequency
+                code_na045Times,
+                new byte[] {4, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 5, 1, 3, 5, 1}
+        ));
+
+        final Timing[] code_na109Times = {
+                new Timing((short)58, (short)61),
+                new Timing((short)58, (short)211),
+                new Timing((short)58, (short)9582),
+                new Timing((short)73, (short)4164),
+                new Timing((short)883, (short)211),
+                new Timing((short)1050, (short)494)
+        };
+        builder.add(new IrCode("na109",
+                40000, // carrier frequency
+                code_na109Times,
+                new byte[] {5, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 3, 4, 2, 4}
+        ));
+
+        builder.add(new IrCode("na110",
+                40161, // carrier frequency
+                code_na017Times,
+                new byte[] {5, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 2, 4, 3, 4}
         ));
 
         builder.add(new IrCode("na111",

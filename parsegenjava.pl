@@ -9,7 +9,7 @@ foreach $arg (@ARGV) {
   if (opendir(DIR, $arg)) {
     @files = readdir( DIR ) or die "Couldn't read from $directory : $!\n+";
    closedir( DIR );
-    @files = sort(grep ( /\.dat$/, @files));
+    @files = sort( { substr($a, 2) <=> substr($b, 2) } (grep ( /\.dat$/, @files)));
     #print @files;
     foreach $f (@files) {
       push(@ARGV, $arg."/".$f);
